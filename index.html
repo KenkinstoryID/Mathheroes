@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MathHeroes</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ====================================== -->
+    <!-- HEADER -->
+    <!-- ====================================== -->
+
+    <header class="header">
+
+        <img
+src="assets/logo.png"
+alt="MathHeroes"
+class="logo">
+
+        <p>
+            Belajar Matematika Menjadi Menyenangkan
+        </p>
+
+    </header>
+
+    <!-- ====================================== -->
+    <!-- SETTING PANEL -->
+    <!-- ====================================== -->
+
+    <section class="setting-panel">
+
+        <div class="form-group">
+
+            <label for="grade">
+
+                Kelas
+
+            </label>
+
+            <select id="grade">
+
+                <option value="1">Kelas 1</option>
+                <option value="2">Kelas 2</option>
+                <option value="3">Kelas 3</option>
+                <option value="4">Kelas 4</option>
+                <option value="5">Kelas 5</option>
+                <option value="6">Kelas 6</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="operation">
+
+                Operasi
+
+            </label>
+
+            <select id="operation">
+
+                <option value="addition">
+
+                    Penjumlahan
+
+                </option>
+
+                <option value="subtraction">
+
+                    Pengurangan
+
+                </option>
+
+                <option value="multiplication">
+
+                    Perkalian
+
+                </option>
+
+                <option value="division">
+
+                    Pembagian
+
+                </option>
+
+            </select>
+<div class="form-group">
+
+    <label for="questionType">
+
+        Jenis Soal
+
+    </label>
+
+    <select id="questionType">
+
+        <option value="normal">
+
+            Hitungan
+
+        </option>
+
+        <option value="story">
+
+            Soal Cerita
+
+        </option>
+
+    </select>
+
+</div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="language">
+
+                Bahasa
+
+            </label>
+
+            <select id="language">
+
+                <option value="id">
+
+                    Indonesia
+
+                </option>
+
+                <option value="en">
+
+                    English
+
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="totalQuestion">
+
+                Jumlah Soal
+
+            </label>
+
+            <select id="totalQuestion">
+
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+
+            </select>
+
+        </div>
+
+        <button id="startBtn">
+
+            Mulai Quiz
+
+        </button>
+
+    </section>
+
+    <!-- ====================================== -->
+    <!-- QUIZ INFO -->
+    <!-- ====================================== -->
+
+    <section class="quiz-info">
+
+        <div>
+
+            Soal :
+
+            <span id="currentQuestion">
+
+                0
+
+            </span>
+
+            /
+
+            <span id="totalQuestions">
+
+                0
+
+            </span>
+
+        </div>
+
+        <div>
+
+            Skor :
+
+            <span id="score">
+
+                0
+
+            </span>
+
+        </div>
+
+        <div>
+
+            Timer :
+
+            <span id="timer">
+
+                0
+
+            </span>
+
+            detik
+
+        </div>
+
+    </section>
+
+    <!-- ====================================== -->
+    <!-- PROGRESS BAR -->
+    <!-- ====================================== -->
+
+    <div class="progress">
+
+        <div id="progressBar"
+             class="progress-bar">
+
+        </div>
+
+    </div>
+    <!-- ====================================== -->
+    <!-- QUESTION AREA -->
+    <!-- ====================================== -->
+
+    <section class="quiz-container">
+<div id="explanationPanel" class="hidden">
+
+    <h3 id="explanationTitle">🧠 Cara Menghitung</h3>
+
+    <div id="explanationContent"></div>
+
+</div>
+        <h2 id="questionText">
+
+            Tekan tombol "Mulai Quiz"
+
+        </h2>
+
+        <div id="answerContainer"
+             class="answer-container">
+
+        </div>
+
+    </section>
+
+    <!-- ====================================== -->
+    <!-- NAVIGATION -->
+    <!-- ====================================== -->
+
+    <section class="navigation">
+
+        <button id="prevBtn">
+
+            ⬅ Sebelumnya
+
+        </button>
+
+        <button id="nextBtn">
+
+            Selanjutnya ➜
+
+        </button>
+
+    </section>
+
+    <!-- ====================================== -->
+    <!-- ACHIEVEMENT -->
+    <!-- ====================================== -->
+
+    <section id="achievement"
+             class="achievement hidden">
+
+        🏆 Achievement Unlocked!
+
+    </section>
+
+    <!-- ====================================== -->
+    <!-- RESULT -->
+    <!-- ====================================== -->
+
+    <section id="result"
+             class="result hidden">
+
+        <h2>
+
+            Quiz Selesai
+
+        </h2>
+
+        <p>
+
+            Nilai Akhir
+
+        </p>
+
+        <h1 id="finalScore">
+
+            0
+
+        </h1>
+
+        <button id="restartBtn">
+
+            Main Lagi
+
+        </button>
+
+    </section>
+
+</div>
+
+<!-- ====================================== -->
+<!-- JAVASCRIPT -->
+<!-- ====================================== -->
+
+<script src="data/questions.js"></script>
+<script src="explanation.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
